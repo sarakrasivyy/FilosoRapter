@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:id="@+id/imbut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_bibli"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginEnd="@dimen/common_padding_default"
+        android:layout_marginTop="@dimen/common_padding_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/textAppearanceSubtitle2"
+        android:layout_marginHorizontal="@dimen/common_padding_default"
+        android:text="titulado instantaneo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imbut"
+        app:layout_constraintTop_toTopOf="@id/imbut"
+        app:layout_constraintBottom_toBottomOf="@id/imbut"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/cblike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_padding_default"
+        android:layout_marginBottom="@dimen/common_padding_default"
+        android:button="@drawable/ic_love"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivdark"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/cblike"
+        app:layout_constraintDimensionRatio="H, 4:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvtitle"
+       />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
